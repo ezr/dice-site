@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>dice</title>
+<style>
+body {
+    background-color: #2E2E2E;
+    color: #E2E2E2;
+    text-align: center;
+}
+.button {
+    height: 160px;
+    width: 230px;
+    font-size: 2.2em;
+    background-color: gray;
+}
+</style>
+</head>
+
+<body>
+<input id="addSubmit" type="button" value="add dice" onclick="addDice()"/>
+<input id="subtractSubmit" type="button" value="subtract dice" onclick="subtractDice()"/>
+<br><br>
+<input class="button" id="clickMe" type="button" value="click to roll!" onclick="roller()"/>
+<br><br>
+<div id="dice">
+<img id="diceImage" src="images/200px-green-Dice-1.png" alt="one">
+</div>
+
+<script src="scripts/dice.js"></script>
+</body>
+</html>
