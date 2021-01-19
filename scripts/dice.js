@@ -24,11 +24,21 @@ function getRandomNumber() {
 function roller() {
     let diceArr = document.querySelectorAll('img');
     diceArr.forEach(myImage => {
+        animater(myImage);
         let roll = getRandomNumber();
         myImage.setAttribute('src','images/200px-green-Dice-' + roll + '.png');
         myImage.setAttribute('title', numbers[roll])
         myImage.setAttribute('alt', numbers[roll])
     })
+}
+
+function animater(e) {
+    e.className = "resetimage";
+    window.requestAnimationFrame(function(time) {
+        window.requestAnimationFrame(function(time) {
+            e.className = "image";
+        });
+    });
 }
 
 function addDice() {

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
 <title>dice</title>
 <style>
 body {
@@ -14,17 +14,35 @@ body {
     font-size: 2.2em;
     background-color: gray;
 }
+.paused{
+    -webkit-animation-play-state:paused;
+    -moz-animation-play-state:paused;
+    -o-animation-play-state:paused;
+    animation-play-state:paused;
+}
+.resetimage {
+    align: center;
+}
+.image {
+    -webkit-animation:spin .1s linear;
+    -moz-animation:spin .1s linear;
+    animation:spin .3s linear;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 </style>
 </head>
 
 <body>
-<input id="addSubmit" type="button" value="add dice" onclick="addDice()"/>
-<input id="subtractSubmit" type="button" value="subtract dice" onclick="subtractDice()"/>
+<input id="addSubmit" type="button" value="add dice" onclick="addDice()">
+<input id="subtractSubmit" type="button" value="subtract dice" onclick="subtractDice()">
 <br><br>
-<input class="button" id="clickMe" type="button" value="click to roll!" onclick="roller()"/>
+<input class="button" id="clickMe" type="button" value="click to roll!" onclick="roller()">
 <br><br>
+
 <div id="dice">
-<img id="diceImage" src="images/200px-green-Dice-1.png" alt="one">
+<img id="diceImage" class="image" src="images/200px-green-Dice-2.png" alt="two" title="two">
 </div>
 
 <script src="scripts/dice.js"></script>
