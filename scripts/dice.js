@@ -12,9 +12,10 @@ function getRandomNumber() {
     let imbalanced = true;
     while (imbalanced) {
         window.crypto.getRandomValues(array);
-        if (array[0] != 126 && array[0] != 127) {
+        if (array[0] != 252 && array[0] != 253 && array[0] != 254 && array[0] != 255) {
         /* if we don't check this, then the dice will
-           be slightly more likely to roll 1 or 2  */
+         * be slightly less likely to roll 5 ror 6
+         */
             imbalanced = false;
         }
     }
